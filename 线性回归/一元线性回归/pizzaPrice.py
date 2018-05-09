@@ -33,3 +33,16 @@ import numpy as np
 temp =  [12] #an instance  
 temp = np.array(temp).reshape((1, -1))  
 print('预测一张12英寸匹萨价格：$%.2f' % model.predict(temp))
+
+
+'''
+上述代码中sklearn.linear_model.LinearRegression类是一个估计器（estimator）。
+估计器依据观测值来预测结果。在scikit-learn里面，所有的估计器都带有fit()和predict()方法。
+fit()用来分析模型参数，predict()是通过fit()算出的模型参数构成的模型，对解释变量进行预测获得的值。
+因为所有的估计器都有这两种方法，所有scikit-learn很容易实验不同的模型。
+LinearRegression类的fit()方法学习下面的一元线性回归模型：
+y = α + βx
+y表示响应变量的预测值，本例指匹萨价格预测值，x是解释变量，本例指匹萨直径。截距α和相关系数β是线性回归模型最关心的事情。
+'''
+
+#一元线性回归拟合模型的参数估计常用方法是普通最小二乘法（ordinary least squares ）或线性最小 二乘法（linear least squares）。
