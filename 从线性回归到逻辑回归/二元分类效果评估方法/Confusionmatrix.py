@@ -8,6 +8,10 @@
 真阴性是指分类器将一个正常短信分辨为ham类。假阳性是指分类器将一个正常短信分辨为spam类。假阴性是指分类器将一个垃圾短信分辨为ham类。
 混淆矩阵（Confusion matrix），也称列联表分析（Contingency table）可以用来描述真假与阴阳的关系。矩阵的行表示实际类型，列表示预测类型。
 '''
+#真阳性(True positive)TP
+#假阳性(False positive）FP
+#真阴性(True negative)TN
+#假阴性(False negative）FN
 #%matplotlib inline
 from matplotlib.font_manager import FontProperties
 font = FontProperties(fname=r"c:\windows\fonts\msyh.ttc", size=10)
