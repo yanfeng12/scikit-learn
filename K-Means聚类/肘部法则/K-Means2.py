@@ -15,9 +15,12 @@ plt.plot(X[:,0],X[:,1],'k.')
 
 from sklearn.cluster import KMeans
 from scipy.spatial.distance import cdist
+#cdist: 计算两个矩阵行间的所有向量对的距离(Computes distance between each pair of the two collections of inputs.)
+
 K = range(1, 10)
 meandistortions = []
 for k in K:
+    #n_clusters：即我们的k值，一般要多试一些值以获得较好的聚类效果。
     kmeans = KMeans(n_clusters=k)
     kmeans.fit(X)
     meandistortions.append(sum(np.min(cdist(X, kmeans.cluster_centers_, 'euclidean'), axis=1)) / X.shape[0])
